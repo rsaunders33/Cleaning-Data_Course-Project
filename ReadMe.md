@@ -13,14 +13,23 @@ It is important to note that we are not using all of the data but are specifical
 1. Only the mean() and std() measurements (a subset of the 561 measurements)
 2. Consolidating multiple sets of measurements into a single mean of measurements across each activity and subject (one row for each activity and subject)
 
-##Running the script
-
-
 ##Assumptions
 The script makes the following assumptions:
+* That you have the packages "dplyr" and "reshape2" installed
 * That the .zip file has been downloaded from https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
 * That is has been extracted into a local directory
+* That the current working directory in R contains the run_analysis.R script
 * That the current working directory in R contains the extracted folder named "UCI HAR Dataset"
+
+##Running the script
+1. See Assumptions Above and Please Adhere to Them
+2. Run command: source("run_analysis.R")
+
+##Output
+The script will place a file called "Tidy Data.txt" in your working directory.  This is the output of step 5 of the assignment.
+
+###Viewing the Output
+Please use the command: read.table("Tidy Data.txt")
 
 ##Explaining the Source Data
 The code book will explain this in detail as well; however, the following represents a high level description of the input data elements.
