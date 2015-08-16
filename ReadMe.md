@@ -2,6 +2,20 @@
 
 The following outlined how the script works and provides instructions for running and recreating the tidy data output.
 
+##Objective of Script
+The purpose of the script is to piece together information regarding testing and training measured taken from a phone.  The following is important to mention about the dataset.
+* Data collects the activity being performed
+* Data collects the subject id for the individual performing the action
+* Data collects 561 different measurements taken at a single point in time for each activity and subject
+* Multiple sets of measurements are taken for each activity and subject
+
+It is important to note that we are not using all of the data but are specifically looking for
+1. Only the mean() and std() measurements (a subset of the 561 measurements)
+2. Consolidating multiple sets of measurements into a single mean of measurements across each activity and subject (one row for each activity and subject)
+
+##Running the script
+
+
 ##Assumptions
 The script makes the following assumptions:
 * That the .zip file has been downloaded from https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
@@ -33,3 +47,41 @@ The following are the high level steps taken to develop a tidy data set represen
 * Filter for Only Relevant Columns and Provide Descriptive Names
 * Define Descriptive Activity Names
 * Create Second Tidy Data Set - Average of each variable for each activity and each subject
+
+###Read Data
+This code is denoted by the "Read in Raw Data" and utilizes read.table to read in all the data tables mentioned above.
+
+###Binding
+1. Subject and activity are added to independent test and train data set (utilizing cbind)
+2. Combine the above test and train data utilizing rbind
+
+###Define Descriptive Measure Names (for relevant values only)
+1. Find Rows in features that Contain "mean() or std()"
+2. Identify measure names in features using step 1 numeric vector
+3. Create a method to generate a descriptive name from a raw measure input
+4. Apply this function over all elements of the measure names using the vector from step 2
+
+####More on Measure Names
+After thorough review of the measure names, below is a list of components and definitions used to help drive the function mentioned above (in Step 3)
+* If the measure contains mean() then the measure name is "Average", else we know it is "Standard Deviation"
+* If the measure name starts with "t" then we know it is a time measure, else we know it starts with "f" and is a frequency measure
+* If the measure contains gyro, then we know that the measure represents an angular velocity and not an acceleration measure
+* If the measure contains gravity, then we know the measure utilizes the gravity acceleration, else it is the phone body acceleration
+* If the measure contains jerk, then we know the measure is a jerk measurement
+* If the measure ends in -X, -Y, or -Z then we know it is measuring an axis, else we know it is a Magnitude measurement
+
+All of the above logic is combined to make a logical and descriptive name.
+
+####Filter for Only Relevant Columns and Provide Descriptive Names
+1. Using the descriptive names from the previous step, we add both "Activity.ID" and "Subject" to the beginning to create a character vector of measure names
+2. Select only relevant columns from merged data from "Binding" step 2 utilizing the measure locations obtained from "Defining Desciptive Measure Names" step 1
+3. Set the column names of the resulting dataset to the character vector from step 1
+
+####Define Descriptive Activity Names
+1. Merge the activity.labels data with the dataset obtained from the last step
+2. Reorder the dataset and changing the activity.name default value
+3. Remove the activity id from the dataset
+
+####Create Second Tidy Data Set
+1. Melt the data, setting the Activity Name and Subject as variable ids
+2. dcast the data to provide the original format but the measures representing the mean across activities and subjects
