@@ -29,7 +29,7 @@ The script makes the following assumptions:
 The script will place a file called "Tidy Data.txt" in your working directory.  This is the output of step 5 of the assignment.
 
 ###Viewing the Output
-Please use the command: read.table("Tidy Data.txt")
+Please use the command: View(read.table("Tidy Data.txt"))
 
 ##Explaining the Source Data
 The code book will explain this in detail as well; however, the following represents a high level description of the input data elements.

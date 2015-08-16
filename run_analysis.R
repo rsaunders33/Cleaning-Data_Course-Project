@@ -93,5 +93,7 @@ library(reshape2)
         
         #dcast data to original format where value represents mean
         avg.data.final<-dcast(data.melt,Activity.Name + Subject ~ Measure,mean,value.var="Value")
+
+        #Write Data to Table and Tell the User
         write.table(avg.data.final,"Tidy Data.txt")
         print("A file called Tidy Data.txt has been placed in your working directory. Use read.table to view the output")
