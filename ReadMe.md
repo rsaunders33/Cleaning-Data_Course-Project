@@ -94,3 +94,4 @@ All of the above logic is combined to make a logical and descriptive name.
 ####Create Second Tidy Data Set
 1. Melt the data, setting the Activity Name and Subject as variable ids
 2. dcast the data to provide the original format but the measures representing the mean across activities and subjects
+3. Write the data to a table named "Tidy Data.txt" and notify the user
