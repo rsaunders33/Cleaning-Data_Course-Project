@@ -92,4 +92,5 @@ Type: Character
 
 Measurement Values (Column 3 to 68) - Represents the average of the measurement being taken during a unique activity on a unique subject.  There are 66 measure averages.
 Value Type: Numeric
-
+Units: Angular Velocity - rad/s
+       Acceleration - m/s^2
