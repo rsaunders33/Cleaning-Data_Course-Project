@@ -79,3 +79,17 @@ All of the above logic is combined to make a logical and descriptive name.
 
 ##Output Data Format
 The output represents a tidy data set (in a text file) with the averages of each measurement for each activity and each subject.  There are 180 rows (30 unique subjects and 6 unique activities) and 68 columns (The activity and subject are dimensions and the 66 different measurements are variables).
+
+###Rows (180)
+There are 180 rows.  Each row represents the average of measurements across unique activities performed by unique subjects
+
+###Columns (68)
+Activity.Name - Represents the activity being performed at the time of measurement
+Type: Character
+
+Subject - Represents the id for a unique subject performing an activity  where measurements were taken
+Type: Character
+
+Measurement Values (Column 3 to 68) - Represents the average of the measurement being taken during a unique activity on a unique subject.  There are 66 measure averages.
+Value Type: Numeric
+

@@ -19,7 +19,7 @@ The script makes the following assumptions:
 2. Run command: source("run_analysis.R")
 
 ##Output
-The script will place a file called "Tidy Data.txt" in your working directory.  This is the output of step 5 of the assignment.
+The script will place a file called "Tidy Data.txt" in your working directory.  This is the output of step 5 of the assignment and explained at the end of the CodeBook.md file.
 
 ##Viewing the Output
 Please use the command: View(read.table("Tidy Data.txt"))
