@@ -62,17 +62,17 @@ After thorough review of the measure names, below is a list of components and de
 
 All of the above logic is combined to make a logical and descriptive name.
 
-####Filter for Only Relevant Columns and Provide Descriptive Names
+###Filter for Only Relevant Columns and Provide Descriptive Names
 1. Using the descriptive names from the previous step, we add both "Activity.ID" and "Subject" to the beginning to create a character vector of measure names
 2. Select only relevant columns from merged data from "Binding" step 2 utilizing the measure locations obtained from "Defining Desciptive Measure Names" step 1
 3. Set the column names of the resulting dataset to the character vector from step 1
 
-####Define Descriptive Activity Names
+###Define Descriptive Activity Names
 1. Merge the activity.labels data with the dataset obtained from the last step
 2. Reorder the dataset and changing the activity.name default value
 3. Remove the activity id from the dataset
 
-####Create Second Tidy Data Set
+###Create Second Tidy Data Set
 1. Melt the data, setting the Activity Name and Subject as variable ids
 2. dcast the data to provide the original format but the measures representing the mean across activities and subjects
 3. Write the data to a table named "Tidy Data.txt" and notify the user
