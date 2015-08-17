@@ -1,10 +1,10 @@
 # Getting and Cleaning Data Course Project
 
-The following are the contents of the repository
-1. ReadMe.md - Looks like you found this file  ;-)
-2. Codebook.md - Codebook to show input data format, transformations, and output format
-3. run_analysis.R - R script to run in Rstudio (takes input data and outputs tidy data)
-4. Tidy Data.txt - Output of the run_analysis.R script
+The following are the contents of the repository:
+* ReadMe.md - Looks like you found this file  ;-)
+* Codebook.md - Codebook to show input data format, transformations, and output format
+* run_analysis.R - R script to run in Rstudio (takes input data and outputs tidy data)
+* Tidy Data.txt - Output of the run_analysis.R script
 
 ##Assumptions
 The script makes the following assumptions:
