@@ -84,13 +84,12 @@ The output represents a tidy data set (in a text file) with the averages of each
 There are 180 rows.  Each row represents the average of measurements across unique activities performed by unique subjects
 
 ###Columns (68)
-Activity.Name - Represents the activity being performed at the time of measurement
-Type: Character
+* Activity.Name - Represents the activity being performed at the time of measurement
+- Type: Character
 
-Subject - Represents the id for a unique subject performing an activity  where measurements were taken
-Type: Character
+* Subject - Represents the id for a unique subject performing an activity  where measurements were taken
+- Type: Character
 
-Measurement Values (Column 3 to 68) - Represents the average of the measurement being taken during a unique activity on a unique subject.  There are 66 measure averages.
-Value Type: Numeric
-Units: Angular Velocity - rad/s
-       Acceleration - m/s^2
+* Measurement Values (Column 3 to 68) - Represents the average of the measurement being taken during a unique activity on a unique subject.  There are 66 measure averages.
+- Value Type: Numeric
+- Units: Angular Velocity - rad/s; Acceleration - m/s^2
