@@ -8,9 +8,10 @@ The purpose of the script is to piece together information regarding testing and
 * Data collects 561 different measurements taken at a single point in time for each activity and subject
 * Multiple sets of measurements are taken for each activity and subject
 
-It is important to note that we are not using all of the data but are specifically looking for  
-1. Only the mean() and std() measurements (a subset of the 561 measurements)  
-2. Consolidating multiple sets of measurements into a single mean of measurements across each activity and subject (one row for each activity and subject)  
+It is important to note that we are not using all of the data but are specifically looking for
+
+1. Only the mean() and std() measurements (a subset of the 561 measurements)
+2. Consolidating multiple sets of measurements into a single mean of measurements across each activity and subject (one row for each activity and subject)
 
 ##Explaining the Source Data
 The code book will explain this in detail as well; however, the following represents a high level description of the input data elements.
